@@ -5,21 +5,21 @@
 class Speclio < Formula
   desc "Keyboard-driven TUI for navigating OpenSpec project artifacts"
   homepage "https://github.com/danshort/speclio"
-  version "0.15.0"
+  version "0.16.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danshort/speclio/releases/download/v0.15.0/speclio-darwin-amd64.tar.gz"
-      sha256 "6db2c004303db1eb380f0f66e44f2b3a7b65098b56f851ab87a748223141d4ab"
+      url "https://github.com/danshort/speclio/releases/download/v0.16.0/speclio-darwin-amd64.tar.gz"
+      sha256 "b5508320abbde4019b82a442f3eb4f5b37eff234eda382d6576e60eddf0d10a8"
 
       define_method(:install) do
         bin.install "speclio"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danshort/speclio/releases/download/v0.15.0/speclio-darwin-arm64.tar.gz"
-      sha256 "6341d4f333ca037c9afe992d87d9f45d8cb6e683ebf0f82942a3c0a0b4b34639"
+      url "https://github.com/danshort/speclio/releases/download/v0.16.0/speclio-darwin-arm64.tar.gz"
+      sha256 "8754bc604a89b64c431a1ab2caf1fbb9cd0ef8d9f68a67b3b957b11efcbdcb75"
 
       define_method(:install) do
         bin.install "speclio"
@@ -29,15 +29,15 @@ class Speclio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danshort/speclio/releases/download/v0.15.0/speclio-linux-amd64.tar.gz"
-      sha256 "2a9defca885c20faa76d6764a747c09e7406532c04103e51aa32e88068eebf28"
+      url "https://github.com/danshort/speclio/releases/download/v0.16.0/speclio-linux-amd64.tar.gz"
+      sha256 "a5b8220eb310e09fb43470e7286e716be1baff0dd4d57314f50ee75fa38b9550"
       define_method(:install) do
         bin.install "speclio"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danshort/speclio/releases/download/v0.15.0/speclio-linux-arm64.tar.gz"
-      sha256 "505794b1004afc7cf10edfd79c34ff2a7d8a451c9b920e8e1c3526e8182783f0"
+      url "https://github.com/danshort/speclio/releases/download/v0.16.0/speclio-linux-arm64.tar.gz"
+      sha256 "06b85685036eb7b0dde67445f64878c8afa086d83b102175f2758a3569a2f7ad"
       define_method(:install) do
         bin.install "speclio"
       end
