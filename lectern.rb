@@ -5,21 +5,21 @@
 class Lectern < Formula
   desc "Keyboard-driven TUI for navigating OpenSpec project artifacts"
   homepage "https://github.com/danshort/lectern"
-  version "0.17.0"
+  version "0.18.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danshort/lectern/releases/download/v0.17.0/lectern-darwin-amd64.tar.gz"
-      sha256 "b66e761408ffa26ea0399d38ed659ef06ef94b566f313afc40621dbbbab413f5"
+      url "https://github.com/danshort/lectern/releases/download/v0.18.0/lectern-darwin-amd64.tar.gz"
+      sha256 "e6b32221563069b0e8b9e28a82876f307021d902b6ccfc974e3170c9b4aa2723"
 
       define_method(:install) do
         bin.install "lectern"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danshort/lectern/releases/download/v0.17.0/lectern-darwin-arm64.tar.gz"
-      sha256 "2e62e91d0d14a4a98d11ead6b1fa0b031db8c902d9978d7058ee9b906fd6dccb"
+      url "https://github.com/danshort/lectern/releases/download/v0.18.0/lectern-darwin-arm64.tar.gz"
+      sha256 "551e39002eb8e5289f166f8d5334b9085026aaa50ad2246b37578b6ddb1483e8"
 
       define_method(:install) do
         bin.install "lectern"
@@ -29,15 +29,15 @@ class Lectern < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danshort/lectern/releases/download/v0.17.0/lectern-linux-amd64.tar.gz"
-      sha256 "a2af6bfa04c1db8a877fbaae1f704554bb6c1eda4111d48a09d5d252bae3bf7c"
+      url "https://github.com/danshort/lectern/releases/download/v0.18.0/lectern-linux-amd64.tar.gz"
+      sha256 "d5ee82dc26bdc4093dd9ac08da735bdc53cbd84f5dc5a11bed8d1c8d6bce99e2"
       define_method(:install) do
         bin.install "lectern"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danshort/lectern/releases/download/v0.17.0/lectern-linux-arm64.tar.gz"
-      sha256 "bb3d4b2af2f1b0836011ad8780dee34856d85e19a26714ec944fadee346ca319"
+      url "https://github.com/danshort/lectern/releases/download/v0.18.0/lectern-linux-arm64.tar.gz"
+      sha256 "b68f0f941d920532257b6e4597a0cf62ae8d4484a204a28e2acad9384a866666"
       define_method(:install) do
         bin.install "lectern"
       end
