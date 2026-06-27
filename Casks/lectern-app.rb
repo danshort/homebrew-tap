@@ -7,8 +7,8 @@
 # The `caveats` block documents the one-time Gatekeeper step for the interim,
 # unnotarized builds. Remove it once notarized (Developer-ID) builds ship.
 cask "lectern-app" do
-  version "0.20.0"
-  sha256 "281d75e4de816a3fd502e298bc01cf62c587f73a0bae630befdfe674bdc0acc6"
+  version "0.20.1"
+  sha256 "4311c6b8d9d51e43062afc65b8b5fa5d5a7a6312316069babf0d20bad5398102"
 
   url "https://github.com/danshort/lectern/releases/download/v#{version}/Lectern-#{version}.zip"
   name "Lectern"
@@ -20,10 +20,16 @@ cask "lectern-app" do
   app "Lectern.app"
 
   caveats <<~EOS
-    Preview builds are ad-hoc signed but not yet notarized, so Gatekeeper blocks
-    the first launch. Right-click Lectern in Applications and choose Open, or run:
+    Preview builds are ad-hoc signed but not yet notarized, so macOS blocks the
+    first launch. To open it, either:
 
-      xattr -dr com.apple.quarantine "#{appdir}/Lectern.app"
+      • Terminal (works on every macOS version):
+          xattr -dr com.apple.quarantine "#{appdir}/Lectern.app"
+
+      • Or: open System Settings -> Privacy & Security, scroll to Security, and
+        click "Open Anyway" next to the Lectern message, then launch again.
+        (On macOS 15 Sequoia and later, the old right-click -> Open no longer
+        offers a bypass — use one of the above.)
 
     This step goes away once notarized builds ship.
   EOS
