@@ -7,8 +7,8 @@
 # The `caveats` block documents the one-time Gatekeeper step for the interim,
 # unnotarized builds. Remove it once notarized (Developer-ID) builds ship.
 cask "lectern-app" do
-  version "0.20.1"
-  sha256 "4311c6b8d9d51e43062afc65b8b5fa5d5a7a6312316069babf0d20bad5398102"
+  version "0.21.0"
+  sha256 "5f91ea5c477b585c8ba9133576005bd717a390bca25ad40654e8a3ccddc0aed7"
 
   url "https://github.com/danshort/lectern/releases/download/v#{version}/Lectern-#{version}.zip"
   name "Lectern"
